@@ -1,0 +1,90 @@
+@import "../../style/mixins/text";
+@import "../../style/mixins/image";
+@import "../../style/index";
+
+.how_discount {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 131px;
+  position: relative;
+
+  &__bg {
+
+    &_1, &_2 {
+      position: absolute;
+      bottom: -236px;
+      z-index: -1;
+    }
+
+    &_2 {
+      filter: blur(2px);
+    }
+
+    &_1 {
+      right: -221px;
+      filter: blur(77px);
+
+      @include b('1440') {
+        right: auto
+      }
+    }
+  }
+
+  @include b('tablet') {
+    padding-top: 61px;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    padding-bottom: 56px;
+
+    @include b('tablet') {
+      padding-bottom: 20px;
+      font-size: 22px;
+      line-height: 37px;
+      text-align: left;
+    }
+  }
+
+  &__roadmap {
+    @include b('tablet') {
+      display: none;
+    }
+  }
+
+  &_item {
+    display: none;
+
+    @include b('tablet') {
+      display: flex;
+      padding-bottom: 20px;
+      align-items: center;
+
+      div {
+        min-width: 52px;
+        height: 52px;
+        border-radius: 100%;
+        border: 2px solid #DC2C2C;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h3 {
+        font-family: TT Commons, sans-serif;
+        font-size: 18px;
+        line-height: 21px;
+        padding-left: 16px;
+        font-weight: normal;
+
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

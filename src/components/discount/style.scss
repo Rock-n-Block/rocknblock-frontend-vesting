@@ -1,0 +1,163 @@
+@import "../../style/mixins/mixins";
+@import "../../style/common/buttons";
+@import "../../style/index";
+
+.discount {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  &__bg {
+    &_1 {
+      position: absolute;
+      top: -113px;
+      left: -221px;
+      filter: blur(70px);
+      @include b('1440') {
+        left: auto
+      }
+    }
+
+    &_2 {
+      position: absolute;
+      top: -113px;
+      right: -221px;
+      filter: blur(70px);
+      @include b('1440') {
+        right: auto
+      }
+    }
+
+  }
+
+  a {
+    width: 252px;
+    height: 65px;
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: bold;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    &:hover {
+      opacity: 0.5;
+      transform: none !important;
+      box-shadow: none !important;
+    }
+
+    @include b('tablet') {
+      font-size: 16px;
+      line-height: 19px;
+      width: 167px;
+      height: 49px;
+    }
+  }
+
+  h1  {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 75px;
+    line-height: 76px;
+    text-align: center;
+    text-transform: uppercase;
+    font-feature-settings: 'liga' off;
+    span {
+      color: #DC2C2C;
+    }
+
+    @include b('tablet') {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+
+  &__input {
+    display: flex;
+    position: relative;
+    max-width: 686px;
+    width: 100%;
+    padding-bottom: 40px;
+
+    &_bg {
+      position: absolute;
+      z-index: -1;
+      top: -32px;
+    }
+
+    @include b('tablet') {
+      padding-bottom: 23px;
+    }
+
+    &_desktop {
+      display: block;
+      @include b('tablet') {
+        display: none;
+      }
+    }
+
+    &_mobile {
+      display: none;
+      position: absolute;
+      right: 10px;
+      top: 16px;
+      cursor: pointer;
+
+      @include b('tablet') {
+        display: flex;
+      }
+    }
+
+    input {
+      background: #FFFFFF;
+      border-radius: 60px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 16px 20px;
+      height: 72px;
+      border: none;
+      text-align: center;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 26px;
+      font-feature-settings: 'liga' off;
+      color: #000000;
+
+      @include b('tablet') {
+        height: 64px;
+      }
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    button {
+      position: absolute;
+      cursor: pointer;
+      font-weight: bold;
+      width: 69px;
+      height: 39px;
+      right: 20px;
+      top: 16px;
+      border: 2px solid #9F9F9F;
+      box-sizing: border-box;
+      border-radius: 60px;
+      font-family: TT Commons, sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      font-feature-settings: 'liga' off;
+      color: #9F9F9F;
+      background-color: #FFFFFF;
+    }
+  }
+}

@@ -1,0 +1,315 @@
+@import "../../style/mixins/text";
+@import "../../style/mixins/media";
+@import "../../style/index";
+
+.team {
+  position: relative;
+  margin-top: 100px;
+  scroll-margin-top: 120px;
+
+  .primary-header {
+    @include text-gradient(linear-gradient(87.05deg, #FFFFFF 50.97%, #171628 62.38%));
+
+    @include b('tablet') {
+      @include text-gradient(linear-gradient(to right, #FFFFFF 51.97%, #171628 77.38%));
+    }
+  }
+
+  @include b('mobile') {
+    margin-top: 50px;
+  }
+
+  .background-img {
+    top: 184px;
+    left: 933px;
+    width: 186px;
+    z-index: -1;
+
+    @include b(1215) {
+      display: none;
+    }
+  }
+
+  .block-header {
+    .secondary-header {
+      margin-top: 7px;
+    }
+  }
+
+  &__tabs {
+    margin-top: 41px;
+
+    @include b('mobile') {
+      margin-top: 30px;
+    }
+  }
+
+  .scroll {
+    @include b('desktop') {
+      overflow-x: auto;
+    }
+  }
+
+  &__content {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    @include b('tablet') {
+      display: inline-flex;
+      overflow-x: scroll;
+    }
+
+    .content__card {
+      margin: 5px;
+      width: 320px;
+      height: 1050px;
+      background: #17141c;
+      border: 2px solid #33333a;
+      box-sizing: border-box;
+      border-radius: 20px;
+
+      @include b('mobile') {
+        margin-top: 30px;
+      }
+
+      img {
+        margin: 3px 3px 30px;
+        border-radius: 17px;
+        text-align: center;
+        object-fit: none;
+        width: 98%;
+      }
+
+      &__post {
+        @include text-gradient(linear-gradient(87.05deg, #FFFFFF 54.97%, #171628 152.38%));
+        padding: 0 15px;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 22px;
+        line-height: 30px;
+        font-feature-settings: 'liga' off;
+      }
+
+      &__name {
+        margin-top: 5px;
+        padding: 0 15px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        color: #DC2C2C;
+      }
+
+      &__description {
+        margin-top: 20px;
+        padding: 0 15px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        font-feature-settings: 'liga' off;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+      }
+
+      &__exp {
+        margin-top: 30px;
+        padding: 0 15px;
+        height: 608px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include b('tablet') {
+          height: initial;
+        }
+
+        div {
+          @include b('tablet') {
+            height: 300px;
+          }
+        }
+
+        &__title {
+          @include text-gradient(linear-gradient(87.05deg, #FFFFFF 54.97%, #171628 152.38%));
+          font-style: normal;
+          font-weight: 800;
+          font-size: 16px;
+          line-height: 19px;
+          font-feature-settings: 'liga' off;
+        }
+
+        &__list {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+
+          &__item {
+            position: relative;
+            margin-top: 10px;
+            padding-left: 17px;
+            color: #8b898d;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            font-feature-settings: 'liga' off;
+            mix-blend-mode: normal;
+
+            &::before {
+              position: absolute;
+              top: 6px;
+              left: 0;
+              content: '';
+              display: inline-block;
+              min-width: 10px;
+              min-height: 10px;
+              border: 1px solid #fff;
+              border-radius: 50%;
+              margin-right: 7px;
+            }
+          }
+        }
+
+        &__stacks {
+          vertical-align: bottom;
+          height: 312px;
+
+          .stacks__title {
+            margin-top: 20px;
+
+            @include text-gradient(linear-gradient(87.05deg, #FFFFFF 54.97%, #171628 152.38%));
+
+            font-style: normal;
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 24px;
+          }
+
+          .gray-list {
+            height: min-content;
+            margin-top: 7px;
+            display: flex;
+            flex-direction: row;
+            justify-self: flex-end;
+            align-items: flex-start;
+            flex-wrap: wrap;
+          }
+        }
+      }
+
+      &__mng {
+        margin: 30px 5px 0;
+        padding: 0;
+        width: 322px;
+        height: 466px;
+        background: #17141c;
+        border: 1px solid #33333a;
+        box-sizing: border-box;
+        border-radius: 23px;
+
+        img {
+          margin: 3px 3px 40px;
+          border-radius: 20px;
+          text-align: center;
+          object-fit: none;
+          width: 98%;
+        }
+
+        .description {
+          margin: 0 20px;
+          display: flex;
+          flex-direction: column;
+          font-family: 'TT Norms', sans-serif;
+
+          &__name {
+            font-style: normal;
+            font-weight: 800;
+            color: #fff;
+          }
+
+          &__post {
+            margin-top: 10px;
+            font-style: normal;
+            font-weight: 400;
+            color: #DC2C2C;
+          }
+        }
+      }
+    }
+
+    @include b('mobile') {
+      justify-content: space-evenly;
+    }
+  }
+
+  &__overview {
+    margin-top: 79px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include b('tablet') {
+      justify-content: center;
+    }
+
+    @include b('mobile') {
+      margin: 30px auto;
+      justify-content: space-around;
+    }
+
+    &__item {
+      margin: 10px;
+      width: 75px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-style: normal;
+      font-weight: bold;
+      font-feature-settings: 'liga' off;
+
+      @include b('mobile') {
+        width: 133px;
+      }
+
+      &__number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 56px;
+        height: 56px;
+        font-size: 22px;
+        line-height: 26px;
+
+        /* identical to box height */
+
+        text-align: center;
+        color: #fff;
+        mix-blend-mode: normal;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #DC2C2C;
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+      }
+
+      .text {
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        font-feature-settings: 'liga' off;
+      }
+
+      &__primary-text {
+        margin-top: 15px;
+        text-align: center;
+      }
+
+      &__secondary-text {
+        opacity: 0.5;
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+@import "../../style/mixins/mixins";
+
+.container {
+  position: relative;
+  z-index: 5;
+  margin: 80px auto 0 auto;
+  padding: 0 15px;
+  max-width: $mediaWidthDesktop;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--body-background-color);
+
+  @include b('tablet') {
+    margin: 0 auto -100px auto;
+  }
+
+  @include b(340) {
+    margin-bottom: -210px;
+  }
+
+  .content {
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bg__img {
+    position: absolute;
+    right: -150px;
+    top: 2281px;
+
+    @include b(1360) {
+      display: none;
+    }
+  }
+
+  h2:not(:nth-child(1)) {
+    margin-top: 40px;
+  }
+
+  h2 {
+    font-family: 'TTCommons', sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 44px;
+
+    @include b(750) {
+      margin-top: 20px;
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  .description {
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 28px;
+    opacity: 0.85;
+
+    @include b(750) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  h3 {
+    margin-top: 20px;
+    font-family: 'TTCommons', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 31px;
+    opacity: 0.85;
+
+    @include b(750) {
+      margin-top: 15px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  .orange {
+    color: #DC2C2C;
+  }
+
+  h2 {
+    @include text-gradient(linear-gradient(to right, #FFFFFF 59%, #171628 139%));
+  }
+
+  .paragraph {
+    margin-top: 10px;
+    font-family: 'TTCommons', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 24px;
+    opacity: 0.85;
+
+    @include b(750) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    a {
+      color: #DC2C2C;
+    }
+
+    &__date {
+      margin-top: 20px;
+      font-family: 'TTCommons', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      opacity: 0.5;
+
+      @include b(750) {
+        font-size: 18px;
+        line-height: 18px;
+      }
+    }
+  }
+}

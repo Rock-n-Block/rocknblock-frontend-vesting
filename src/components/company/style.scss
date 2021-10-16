@@ -1,0 +1,162 @@
+@import "../../style/mixins/mixins";
+
+.container {
+  position: relative;
+  z-index: 5;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--body-background-color);
+
+  .bg__2 {
+    position: absolute;
+    top: 300px;
+    left: -260px;
+
+    @include b(1200) {
+      display: none;
+    }
+  }
+
+  .blocks {
+    margin: 78px auto 200px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1000px;
+
+    @include b('desktop') {
+      margin: 1em auto 0 auto;
+      width: 80%;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+
+    @include b(655) {
+      justify-content: center;
+    }
+
+    h2 {
+      font-family: 'TTCommons', sans-serif;
+      font-weight: 800;
+      font-size: 50px;
+      line-height: 44px;
+      @include text-gradient(linear-gradient(to right, #FFFFFF 60%, #171628 100%));
+
+      @include b(750) {
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+
+    .company {
+      width: 50%;
+
+      @include b('desktop') {
+        margin-bottom: 50px;
+        width: 100%
+      }
+
+      @include b('tablet') {
+        text-align: center;
+      }
+
+      &__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include b('tablet') {
+          justify-content: center;
+        }
+
+        &__item {
+          margin-top: 50px;
+          width: 250px;
+
+          &__title {
+            font-family: 'TTCommons', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            opacity: 0.85;
+          }
+
+          img {
+            margin: 15px 0;
+          }
+
+          &__text {
+            font-family: 'TTCommons', sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            opacity: 0.85;
+          }
+        }
+      }
+    }
+
+    .contacts {
+      width: 30%;
+
+      @include b('desktop') {
+        width: 100% ;
+      }
+
+      @include b(655) {
+        text-align: center;
+      }
+
+      &__info {
+        margin-top: 47px;
+
+        &__item {
+          margin-bottom: 23px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          &__img {
+            margin-right: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 42px;
+            height: 42px;
+            border: 1px solid #DC2C2C;
+            border-radius: 50%;
+
+            img {
+              padding-left: 1px;
+            }
+          }
+
+          &__content {
+            font-family: 'TTCommons', sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            opacity: 0.85;
+          }
+        }
+      }
+    }
+  }
+
+  .bg__3 {
+    position: absolute;
+    bottom: 80px;
+    right: 100px;
+
+    @include b(655) {
+      display: none;
+    }
+  }
+}
