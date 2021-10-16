@@ -10,7 +10,11 @@ const BuildToken: FunctionalComponent = () => {
       <div class={style.container}>
         <div class={style.title}>VESTING</div>
         <div class={style.description}>Build a Token Vesting Contract</div>
-        <Button type='withIcon' customStyle={style.button} name={'Try Vesting'} />
+        <Button type='withIcon'
+          customStyle={style.button}
+          name={'Try Vesting'}
+          action={(): void => {window.open('/#contact-us', '_self')}}
+        />
       </div>
     </div>
   );
