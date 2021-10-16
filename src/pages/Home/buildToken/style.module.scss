@@ -1,0 +1,138 @@
+@import "../../../style/index.scss";
+
+.block {
+  padding-bottom: 40%;
+
+  @media (min-width: 1920px) {
+    padding-bottom: 800px;
+  }
+
+  @media (max-width: 1600px) {
+    padding-bottom: 30%;
+  }
+
+  @media (max-width: 1024px) {
+    padding-left: 20px;
+  }
+
+  @media (max-width: 900px) {
+    padding-bottom: 500px;
+  }
+
+  @include b('mobile') {
+    padding-bottom: 270px;
+  }
+
+  .title {
+    font-family: TTNorms;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 124px;
+    line-height: 127px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: 145px;
+
+    @media (max-width: 1200px) {
+      font-size: 100px;
+      line-height: 105px;
+    }
+
+    @media (max-width: 1000px) {
+      font-size: 100px;
+      line-height: 105px;
+    }
+
+    @media (max-width: 900px) {
+      margin-top: 0px;
+      text-align: center;
+      font-size: 71px;
+      line-height: 73px;
+    }
+
+    @media (max-width: 375px) {
+      font-size: 50px;
+      line-height: 50px;
+    }
+  }
+
+  .description {
+    font-family: TTCommons;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin-top: 13px;
+
+    @media (max-width: 900px) {
+      text-align: center;
+      margin-top: 23px;
+      font-size: 22px;
+      line-height: 25px;
+    }
+  }
+
+  .button {
+    text-transform: none;
+    font-family: TTNorms;
+    font-weight: 400;
+    margin-top: 30px;
+
+    @media (max-width: 900px) {
+      margin: auto;
+      margin-top: 20px;
+      font-size: 20px;
+    }
+  }
+
+  .backgroundTop {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90.22deg, #52565C 1.07%, #494E54 99.93%);
+    width: 100%;
+    height: 300px;
+
+    @media (max-width: 900px) {
+      display: block;
+    }
+  }
+
+  .background {
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0;
+    background-image: url('/assets/img/vesting/image535.png');
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 1950px;
+
+    @media (min-width: 1920px) {
+      background-size: 1920px;
+    }
+
+    @media (max-width: 1919px) {
+      background-size: 100%;
+      background-position: 50% 0;
+    }
+
+    @media (max-width: 1024px) {
+      background-size: 120%;
+    }
+
+    @media (max-width: 900px) {
+      top: 200px;
+      background-position: 68% 0;
+      background-size: 900px;
+    }
+
+    @include b('mobile') {
+      background-size: 500px;
+    }
+  }
+}

@@ -7,6 +7,7 @@ import {
     TelegramWidget,
     OtherSites
 } from "../../components";
+import BuildToken from './buildToken';
 
 const HomePage: FunctionalComponent = () => {
     const [isActive, setIsActive] = useState(false);
@@ -32,6 +33,7 @@ const HomePage: FunctionalComponent = () => {
         <div>
             <TelegramWidget />
             {isActive ? <UpButton /> : null}
+            <BuildToken />
             <OtherSites />
             <ContactUs title={'Estimate your project now!'}
                        subtitle={'Get free consultation and build your blockchain project with our highly qualified team!'} />
