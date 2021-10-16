@@ -10,6 +10,7 @@ import {
 import BuildToken from './buildToken';
 import Businesses from './businesses';
 import TokenOptions from './tokenOptions';
+import WhatGives from './whatGives';
 import WhatMean from './whatMean';
 
 const HomePage: FunctionalComponent = () => {
@@ -40,6 +41,7 @@ const HomePage: FunctionalComponent = () => {
             <WhatMean />
             <TokenOptions />
             <Businesses />
+            <WhatGives />
             <OtherSites />
             <ContactUs title={'Estimate your project now!'}
                        subtitle={'Get free consultation and build your blockchain project with our highly qualified team!'} />
