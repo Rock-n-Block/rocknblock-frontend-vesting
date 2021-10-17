@@ -10,6 +10,7 @@ import {
 import BuildToken from './buildToken';
 import Businesses from './businesses';
 import CustomSmartContract from './customSmartContract';
+import HomePageSites from './HomePageSites/HomePageSites';
 import LongTerms from './longTerms';
 import SmartContract from './smartContract';
 import TokenOptions from './tokenOptions';
@@ -48,7 +49,7 @@ const HomePage: FunctionalComponent = () => {
             <LongTerms />
             <SmartContract />
             <CustomSmartContract />
-            <OtherSites />
+            <HomePageSites />
             <ContactUs title={'Estimate your project now!'}
                        subtitle={'Get free consultation and build your blockchain project with our highly qualified team!'} />
         </div>
