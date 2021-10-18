@@ -39,8 +39,8 @@ const TokenOptions: FunctionalComponent = () => {
       <div class={style.title}>Token Vesting Options:</div>
       <div class={style.descriptions}>There are two primary token vesting options:</div>
       <div class={style.cardContainer}>
-        {cardData.map((item: CardProps, i) => (
-            <Card key={i} title={item.title} description={item.description} imgUrl={item.imgUrl} />
+        {cardData.map((item: CardProps) => (
+            <Card key={item.title} title={item.title} description={item.description} imgUrl={item.imgUrl} />
           )
         )}
       </div>

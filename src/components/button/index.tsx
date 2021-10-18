@@ -12,9 +12,7 @@ interface Props {
 
 const Input: FunctionalComponent<Props> = ({name, customStyle, type, action}) => {
   const getIcon = () => {
-    if (type === 'withIcon')
-      return <img class={style.btnIcon} src="../../assets/img/icons/icon-arrow-right-mask.svg" />
-    return null;
+    return type === 'withIcon' ? <img class={style.btnIcon} src="../../assets/img/icons/icon-arrow-right-mask.svg" /> : null;
   }
   return (
     <button class={`${style.button} ${customStyle ?? ''}`} onClick={action} >

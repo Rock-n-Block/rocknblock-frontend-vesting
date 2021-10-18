@@ -28,7 +28,7 @@ const WhatGives: FunctionalComponent = () => {
     <div class={style.block}>
       <div class={style.title}>What Vesting Gives</div>
       <div class={style.thingContainer}>
-        {ThingsData.map((item: ThingProps, i) => <Thing key={i} imgUrl={item.imgUrl} label={item.label} />)}
+        {ThingsData.map((item: ThingProps) => <Thing key={item.label} imgUrl={item.imgUrl} label={item.label} />)}
       </div>
     </div>
   );
