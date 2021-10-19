@@ -14,7 +14,7 @@ const BuildToken: FunctionalComponent = () => {
         <Button type='withIcon'
           customStyle={style.button}
           name={'Try Vesting'}
-          action={(): void => { route('/#contact-us', true) }}
+          action={(): void => {window.open('/#contact-us', '_self')}}
         />
       </div>
     </div>
