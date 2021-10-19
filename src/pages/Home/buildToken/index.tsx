@@ -1,4 +1,5 @@
 import { FunctionalComponent, h } from "preact";
+import { route } from "preact-router";
 import { Button } from "../../../components";
 import style from './style.module.scss';
 
@@ -13,7 +14,7 @@ const BuildToken: FunctionalComponent = () => {
         <Button type='withIcon'
           customStyle={style.button}
           name={'Try Vesting'}
-          action={(): void => {window.open('/#contact-us', '_self')}}
+          action={(): void => { route('/#contact-us', true) }}
         />
       </div>
     </div>

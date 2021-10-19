@@ -10,7 +10,7 @@ import ThanksPage from '../pages/Thanks';
 import PrivacyPolicyPage from '../pages/PrivacyPolicy';
 import TermsPage from '../pages/Terms';
 import CompanyPage from '../pages/Company';
-import { useEffect, useState } from 'preact/hooks';
+import { useState } from 'preact/hooks';
 import { PopupPreloader } from '.';
 
 
@@ -19,15 +19,10 @@ if (typeof window !== "undefined") smoothscroll.polyfill();
 const App: FunctionalComponent = () => {
     const [showPreloader, setShowPreloader] = useState(true);
 
-    useEffect(() => {
-        if (showPreloader) {
-            setTimeout(() => {setShowPreloader(false)}, 2000)
-        }
-    }, []);
 
     return (
         <div id="preact_root">
-            {showPreloader ? <PopupPreloader /> : null}
+            {showPreloader ? <PopupPreloader showPreloader={showPreloader} setShowPreloader={setShowPreloader} /> : null}
             <Header />
             <Router>
                 <HomePage path='/' />
