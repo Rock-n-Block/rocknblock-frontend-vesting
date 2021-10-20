@@ -4,18 +4,19 @@ import {useCallback, useEffect, useState} from 'preact/hooks';
 import {
     ContactUs,
     UpButton,
-    TelegramWidget,
-    OtherSites
+    TelegramWidget
 } from "../../components";
-import BuildToken from './buildToken';
-import Businesses from './businesses';
-import CustomSmartContract from './customSmartContract';
-import HomePageSites from './HomePageSites/HomePageSites';
-import LongTerms from './longTerms';
-import SmartContract from './smartContract';
-import TokenOptions from './tokenOptions';
-import WhatGives from './whatGives';
-import WhatMean from './whatMean';
+
+import { BuildToken,
+    Businesses,
+    CustomSmartContract,
+    HomePageSites,
+    LongTerms,
+    SmartContract,
+    TokenOptions,
+    WhatGives,
+    WhatMean
+} from './components';
 
 const HomePage: FunctionalComponent = () => {
     const [isActive, setIsActive] = useState(false);

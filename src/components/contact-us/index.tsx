@@ -33,7 +33,7 @@ const ContactUs: FunctionalComponent<ContactUsProps> = ({title, subtitle}) => {
     siteKey: RECAPTCHA_KEY
   });
 
-  const formData = JSON.stringify({name, contact, message: idea, social});
+  const formData = JSON.stringify({name, contact, message: idea, social, landing: 'vesting'});
 
   const headers = {
     'Content-Type': 'application/json',
@@ -57,13 +57,19 @@ const ContactUs: FunctionalComponent<ContactUsProps> = ({title, subtitle}) => {
   const onSubmit = async (e: Event | undefined): Promise<void> => {
     if (e) e.preventDefault();
 
+
     if (name && contact && idea) {
+      console.log("111");
       setIsCompleted(true);
       try {
+        console.log("222111");
         const token = await executeReCaptcha();
+        console.log("2221113");
         setToken(token);
+        console.log("2221114");
         fetchForm(token);
       } catch (e) {
+        console.log("111");
         console.error(e);
       }
 

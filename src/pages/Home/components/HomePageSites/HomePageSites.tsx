@@ -5,7 +5,7 @@ import {
     Swiper, SwiperSlide
 } from 'swiper/react';
 import 'swiper/swiper.min.css';
-import { SiteCard } from '../../../components';
+import { SiteCard } from '../../../../components';
 import styles from './HomePageSites.module.scss';
 import { otherSites } from './mock';
 

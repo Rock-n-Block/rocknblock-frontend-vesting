@@ -1,5 +1,5 @@
 import { FunctionalComponent, h } from "preact";
-import { Button } from "../../../components";
+import { Button } from "../../../../components";
 import { sliderData } from "./mock";
 import style from './style.module.scss';
 

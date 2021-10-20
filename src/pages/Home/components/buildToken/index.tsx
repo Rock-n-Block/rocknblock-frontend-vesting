@@ -1,6 +1,5 @@
 import { FunctionalComponent, h } from "preact";
-import { route } from "preact-router";
-import { Button } from "../../../components";
+import { Button } from "../../../../components";
 import style from './style.module.scss';
 
 const BuildToken: FunctionalComponent = () => {

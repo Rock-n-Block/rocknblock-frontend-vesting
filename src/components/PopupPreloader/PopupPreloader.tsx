@@ -1,23 +1,23 @@
 import {
     FunctionComponent, h
 } from 'preact';
-import { useEffect } from 'preact/hooks';
+import { useEffect, useState } from 'preact/hooks';
 import styles from './PopupPreloader.module.scss';
 
 interface Props {
-    showPreloader: boolean;
-    setShowPreloader(isSet: boolean): void;
+    timeout: number;
 }
 
-const PopupPreloader: FunctionComponent<Props> = ({showPreloader, setShowPreloader}: Props) => {
+const PopupPreloader: FunctionComponent<Props> = ({timeout}: Props) => {
+    const [showPreloader, setShowPreloader] = useState(true);
     
     useEffect(() => {
         if (showPreloader) {
-            setTimeout(() => {setShowPreloader(false)}, 2000)
+            setTimeout(() => {setShowPreloader(false)}, timeout)
         }
     }, []);
 
-    return (
+    const Preloader: FunctionComponent =  () => (
         <div className={styles.preloader}>
             <div className={styles.preloader__iconWrapper}>
                 <img
@@ -28,6 +28,8 @@ const PopupPreloader: FunctionComponent<Props> = ({showPreloader, setShowPreload
             </div>
         </div>
     );
+
+    return showPreloader ? <Preloader /> : null;
 } 
 
 export default PopupPreloader;
