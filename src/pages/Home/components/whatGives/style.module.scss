@@ -1,0 +1,70 @@
+@import "../../../../style/index.scss";
+
+.block {
+  text-align: center;
+  margin-top: 160px;
+
+  @media (max-width: 1100px) {
+    margin-top: 60px;
+  }
+
+  .title {
+    font-family: TTNorms;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (max-width: 1100px) {
+      font-size: 45px;
+      line-height: 48px;
+    }
+
+    @include b('mobile') {
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+
+  .thingContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 76px;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+
+    .thing {
+      width: 220px;
+      padding-bottom: 30px;
+
+      @media (max-width: 700px) {width: 167px;}
+      @media (max-width: 540px) {width: 140px;}
+      @media (max-width: 420px) {width: 120px;}
+
+      .thingImg {
+        padding-bottom: 30px;
+      }
+
+      .thingLabel {
+        width: 150px;
+        margin: auto;
+        font-family: TTCommons;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include b('mobile') {
+          width: 120px;
+          font-size: 15px;
+          line-height: 17px;
+        }
+      }
+    }
+  }
+}

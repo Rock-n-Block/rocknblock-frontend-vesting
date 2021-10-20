@@ -1,0 +1,140 @@
+@import "../../../../style/index.scss";
+
+.block {
+  height: auto;
+
+  @media (max-width: 1920px) {
+    width: 100%;
+  }
+
+  .title {
+    font-family: TTNorms;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    @include b('mobile') {
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+
+  .content {
+    margin: auto;
+    width: 1920px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-template-rows: 300px 300px;
+    width: 1200px;
+
+    @media (max-width: 1300px) {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+    }
+
+    @include b('mobile') {
+      margin: 20px 0;
+      width: 100%;
+      width: calc(100% + 30px);
+      margin-left: -15px;
+    }
+
+
+    .description {
+      margin-left: 90px;
+      margin-top: 80px;
+      order: 2;
+      width: 401px;
+      font-family: TTCommons;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 30px;
+      grid-column-start: 2;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 1;
+
+      @media (max-width: 1300px) {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 22px;
+        line-height: 25px;
+      }
+
+      @include b('mobile') {
+        padding: 0 20px 400px;
+      }
+    }
+
+    .img {
+      width: auto;
+      grid-column-start: 1;
+      grid-column-end: 1;
+      grid-row-start: 1;
+      grid-row-end: 2;
+
+      @media (max-width: 1300px) {
+        margin-left: 0;
+        height: 360px;
+        width: 420px;
+        margin: auto;
+        order: 2;
+      }
+
+      @include b('mobile') {
+        position: absolute;
+        margin-top: 120px;
+        height: 400px;
+        width: 500px;
+      }
+    }
+
+    .info{
+      margin-left: 90px;
+      width: 481px;
+      font-family: TTCommons;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 30px;
+      grid-column-start: 2;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 2;
+
+      @media (max-width: 1300px) {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 22px;
+        line-height: 25px;
+        margin-top: 10px;
+        order: 3;
+      }
+
+      @include b('mobile') {
+        padding: 0 20px;
+      }
+
+      .rectangle {
+        height: 100px;
+        margin-left: -30px;
+        width: 14px;
+        z-index: 2;
+        position: absolute;
+
+        @media (max-width: 1300px) {
+          display: none;
+        }
+      }
+    }
+  }
+}

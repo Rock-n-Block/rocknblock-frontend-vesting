@@ -1,0 +1,133 @@
+@import "../../../../style/index.scss";
+
+.block {
+  margin-top: 200px;
+
+  @media (max-width: 1300px) {
+    margin-top: 0px;
+  }
+
+  @media (max-width: 900px) {
+    margin-top: 60px;
+  }
+
+  .ellipse {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background-color: white;
+    filter: blur(150px);
+    left: calc(50% + 320px);
+    margin-top: 40px;
+
+    @media (max-width: 900px) {
+      left: auto;
+      right: calc(50% - 70px);
+      margin-top: -40px;
+    }
+  }
+
+  .title {
+    width: 800px;
+    margin: auto;
+    font-family: TTNorms;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (max-width: 800px) {
+      width: 95%;
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+
+  .descriptions {
+    font-family: TTCommons;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    width: 700px;
+    margin: auto;
+
+    @media (max-width: 700px) {
+      width: 95%;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  .button {
+    margin: auto;
+    margin-top: 40px;
+  }
+
+  @media (max-width: 700px) {
+    margin-top: 20px;
+  }
+
+  .sliderContainerWrapper {
+    width: 100%;
+    overflow: auto;
+    scroll-snap-align: center;
+
+    .sliderContainer {
+      min-width: 1200px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: center;
+
+      @include b('mobile') {
+        min-width: 600px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+
+      .slide {
+        width: 270px;
+        height: 140px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+        border-radius: 12px;
+        border: solid 3px rgba(255, 255, 255, 0.4);
+        margin: 0 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 16px;
+
+        @include b('mobile') {
+          width: 140px;
+          height: 124px;
+          margin: 0 5px;
+        }
+  
+        .slideImg {
+          display: block;
+          margin: auto;
+        }
+  
+        .slideName {
+          text-align: center;
+          font-family: TTCommons;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+
+          @include b('mobile') {
+            max-width: 100px;
+            margin: auto;
+          }
+        }
+      }
+    }
+  }
+}

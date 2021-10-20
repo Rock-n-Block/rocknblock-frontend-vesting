@@ -4,9 +4,19 @@ import {useCallback, useEffect, useState} from 'preact/hooks';
 import {
     ContactUs,
     UpButton,
-    TelegramWidget,
-    OtherSites
+    TelegramWidget
 } from "../../components";
+
+import { BuildToken,
+    Businesses,
+    CustomSmartContract,
+    HomePageSites,
+    LongTerms,
+    SmartContract,
+    TokenOptions,
+    WhatGives,
+    WhatMean
+} from './components';
 
 const HomePage: FunctionalComponent = () => {
     const [isActive, setIsActive] = useState(false);
@@ -32,7 +42,15 @@ const HomePage: FunctionalComponent = () => {
         <div>
             <TelegramWidget />
             {isActive ? <UpButton /> : null}
-            <OtherSites />
+            <BuildToken />
+            <WhatMean />
+            <TokenOptions />
+            <Businesses />
+            <WhatGives />
+            <LongTerms />
+            <SmartContract />
+            <CustomSmartContract />
+            <HomePageSites />
             <ContactUs title={'Estimate your project now!'}
                        subtitle={'Get free consultation and build your blockchain project with our highly qualified team!'} />
         </div>

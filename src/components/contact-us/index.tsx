@@ -33,14 +33,14 @@ const ContactUs: FunctionalComponent<ContactUsProps> = ({title, subtitle}) => {
     siteKey: RECAPTCHA_KEY
   });
 
-  const formData = JSON.stringify({name, socialNetwork: contact, message: idea, social});
+  const formData = JSON.stringify({name, contact, message: idea, social, landing: 'vesting'});
 
   const headers = {
     'Content-Type': 'application/json',
   };
 
   const fetchForm = (token: string): void => {
-    if (token) fetch(`https://rocknblock.io/api/v1/send_unblocking_feedback/`, {
+    if (token) fetch(`https://rnblading.rocknblock.io/api/v2/email`, {
       method: 'POST',
       headers,
       body: formData
@@ -56,6 +56,7 @@ const ContactUs: FunctionalComponent<ContactUsProps> = ({title, subtitle}) => {
 
   const onSubmit = async (e: Event | undefined): Promise<void> => {
     if (e) e.preventDefault();
+
 
     if (name && contact && idea) {
       setIsCompleted(true);
@@ -102,7 +103,7 @@ const ContactUs: FunctionalComponent<ContactUsProps> = ({title, subtitle}) => {
           onInput={(): void => onSetName(event)}
         />
         <label htmlFor="" className={style['visually-hidden']}>Enter your name</label>
-        <SocialInput placeholder={'Your contact (telegram, email, ...)'}
+        <SocialInput placeholder={'Your contact'}
           customStyleBlock={style.socialsBlock}
           customStyleInput={style['contact-us__form__input']}
           customStyleSocials={style.socialsType}

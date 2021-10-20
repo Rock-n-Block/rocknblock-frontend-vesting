@@ -1,0 +1,126 @@
+@import "../../../../style/index.scss";
+
+.block {
+  text-align: center;
+
+  .ellipse {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: white;
+    filter: blur(200px);
+    left: calc(50% - 612px);
+
+    @media (max-width: 1300px) {
+      left: 0px;
+      margin-top: 140px;
+    }
+
+    @include b('mobile') {
+      width: 130px;
+      height: 130px;
+      filter: blur(150px);
+    }
+  }
+
+  .title {
+    font-family: TTNorms;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 60px;
+    text-transform: uppercase;
+
+    @media (max-width: 1300px) {
+      margin-top: 50px;
+    }
+
+    @media (max-width: 650px) {
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+
+  .descriptions {
+    font-family: TTCommons;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+    margin-top: 30px;
+
+    @media (max-width: 650px) {
+      font-size: 22px;
+      line-height: 25px;
+    }
+  }
+
+  .cardContainer {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+    .card {
+      width: 420px;
+      height: 535px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+      border: solid 3px rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      justify-content: flex-end;
+      margin: 50px 20px 0;
+
+      @include b('mobile') {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        width: 370px;
+        height: 303px;
+        padding: 25px 20px;
+        margin: 5px 0;
+        height: auto;
+      }
+
+      .cardImg {
+        width: 116px;
+
+        @include b('mobile') {
+          width: 78px;
+          margin-right: 20px;
+        }
+      }
+
+      .cardTitle {
+        margin-top: 50px;
+        font-family: TTNorms;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include b('mobile') {
+          margin-top: 10px;
+          width: 200px;
+        }
+      }
+
+      .cardDescription {
+        margin-top: 23px;
+        font-family: TTCommons;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+  }
+}

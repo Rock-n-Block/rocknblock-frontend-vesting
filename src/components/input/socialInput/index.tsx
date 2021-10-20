@@ -59,7 +59,7 @@ const Socials: FunctionalComponent<SocisalsProps> = ({onChangeSocial, customStyl
 
     return (
       <div class={style.socList}>
-        {socials.map((item, i) => <Social key={i} social={item} 
+        {socials.map((item) => <Social key={item.name} social={item} 
           action={ () => action(item)}
         />)}
       </div>
