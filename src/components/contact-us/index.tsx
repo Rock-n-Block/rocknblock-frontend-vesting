@@ -59,17 +59,12 @@ const ContactUs: FunctionalComponent<ContactUsProps> = ({title, subtitle}) => {
 
 
     if (name && contact && idea) {
-      console.log("111");
       setIsCompleted(true);
       try {
-        console.log("222111");
         const token = await executeReCaptcha();
-        console.log("2221113");
         setToken(token);
-        console.log("2221114");
         fetchForm(token);
       } catch (e) {
-        console.log("111");
         console.error(e);
       }
 
